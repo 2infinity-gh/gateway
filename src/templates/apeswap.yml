@@ -1,0 +1,18 @@
+# how much the execution price is allowed to move unfavorably from the trade
+# execution price. It uses a rational number for precision.
+allowedSlippage: '2/100'
+
+# the maximum gas allowed for a unsiwap trade.
+# TODO: find best values for ape swap
+gasLimitEstimate: 150688
+
+# how long a trade is valid in seconds. After time passes apeswap will not
+# perform the trade, but the gas will still be sent.
+ttl: 600
+
+contractAddresses:
+  binance-smart-chain:
+    mainnet:
+      apeswapRouterAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7'
+    testnet:
+      apeswapRouterAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7'

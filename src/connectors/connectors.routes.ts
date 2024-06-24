@@ -5,6 +5,7 @@ import { asyncHandler } from '../services/error-handler';
 import { MadMeerkatConfig } from './mad_meerkat/mad_meerkat.config';
 import { OpenoceanConfig } from './openocean/openocean.config';
 import { PangolinConfig } from './pangolin/pangolin.config';
+import { ApeswapConfig } from './apeswap/apeswap.config';
 import { PerpConfig } from './perp/perp.config';
 import { QuickswapConfig } from './quickswap/quickswap.config';
 import { SushiswapConfig } from './sushiswap/sushiswap.config';
@@ -54,6 +55,12 @@ export namespace ConnectorsRoutes {
             chain_type: PangolinConfig.config.chainType,
             available_networks: PangolinConfig.config.availableNetworks,
           },
+          {
+            name: 'apeswap',
+            trading_type: ApeswapConfig.config.tradingTypes,
+            chain_type: ApeswapConfig.config.chainType,
+            available_networks: ApeswapConfig.config.availableNetworks,
+          },          
           {
             name: 'openocean',
             trading_type: OpenoceanConfig.config.tradingTypes,
