@@ -19,7 +19,7 @@ import {
   TokenAmount,
   Trade,
   Pair,
-} from '@ape.swap/router-sdk';
+} from '@pangolindex/sdk';
 import { logger } from '../../services/logger';
 import { BinanceSmartChain } from '../../chains/binance-smart-chain/binance-smart-chain';
 import { ExpectedTrade, Uniswapish } from '../../services/common-interfaces';
@@ -68,10 +68,10 @@ export class Apeswap implements Uniswapish {
   }
 
   public async init() {
-    if (!this.avalanche.ready()) {
-      await this.avalanche.init();
+    if (!this.binancesmartchain.ready()) {
+      await this.binancesmartchain.init();
     }
-    for (const token of this.avalanche.storedTokenList) {
+    for (const token of this.binancesmartchain.storedTokenList) {
       this.tokenList[token.address] = new Token(
         this.chainId,
         token.address,
