@@ -168,6 +168,6 @@
     "viem": "^0.3.x"
   },
   "resolutions": {
-    "web3-utils": "1.7.3"
+    "web3-utils": "1.8.2"
   }
 }
